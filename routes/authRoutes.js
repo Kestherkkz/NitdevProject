@@ -79,7 +79,7 @@ router.patch("/verify-email", async (req, res) => {
     const user = await User.findOne({ where: { email: value.email } });
 
     if (!user) {
-      return res.status(404).json({ message: "User not found" });
+      return res.status(404).json({ message: "Sorry, User not found" });
     }
 
     if (new Date() > new Date(user.otpExpiresAt)) {
