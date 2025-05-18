@@ -58,7 +58,8 @@ router.post("/signup", async (req, res) => {
 
     return res.status(200).json({ message: "User Created Successfully, An Otp was sent to verify your email" });
   } catch (error) {
-    return res.status(402).json({ message: error.message });
+    console.log("error signing up user", error)
+    // return res.status(402).json({ message: error.message });
   }
 });
 
