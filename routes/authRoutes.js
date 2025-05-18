@@ -56,7 +56,7 @@ router.post("/signup", async (req, res) => {
 
     sendEmail({ firstName: value.firstName, otp, email: value.email });
 
-    return res.status(200).json({ message: "User Created Successfully, an Otp was sent to verify your email" });
+    return res.status(200).json({ message: "User Created Successfully, An Otp was sent to verify your email" });
   } catch (error) {
     return res.status(402).json({ message: error.message });
   }
